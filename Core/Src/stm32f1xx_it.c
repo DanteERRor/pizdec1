@@ -251,13 +251,13 @@ void TIM2_IRQHandler(void)
   }
 
 
-  if (flag_2 == 500*2*2*2*2)
+  if (flag_2 == 100*2*2*2*2)
   {
 	  speed_massiv = speed_temp;
 	  speed_temp = 0;
 
 	  flag_2 = 0;
-	  second_period = 0.5;
+	  second_period = 0.1;
   }
 
   if (flag_3 == 30000)

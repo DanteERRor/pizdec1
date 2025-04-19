@@ -71,7 +71,7 @@ extern int flag_speed_test; // тестовое переключение ско�
 float speed_temp = 0; // буфер для записи скорости
 float speed_massiv = 0; // итоговая скорость
 float speed_uart = 0; // скорость на юарт
-float n_second = 0.5; // период регулирования - для майна
+float n_second = 0.1; // период регулирования - для майна
 
 
 float pwmDutyCycle = 65535/5; // начальный Ш�?М
@@ -331,7 +331,7 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 3-1;
+  htim2.Init.Prescaler = 1-1;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim2.Init.Period = 160;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
